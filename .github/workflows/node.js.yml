@@ -15,7 +15,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            sudo cd /home/ubuntu/simple-nodejs-app
+            cd /home/ubuntu/simple-nodejs-app
             git pull
             npm install  # Install dependencies
             npm run build  # Optional: Build the app
