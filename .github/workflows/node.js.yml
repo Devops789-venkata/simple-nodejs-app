@@ -18,4 +18,5 @@ jobs:
             cd /home/ubuntu/simple-nodejs-app
             git pull
             npm install  # Install dependencies
-            npm run start  # Optional: Build the app
+            nohup npm start > output.log 2>&1 &
+
