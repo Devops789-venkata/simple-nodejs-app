@@ -1,0 +1,17 @@
+name: Deploy on main push
+
+on:
+  push:
+    branches:
+      - main  # Trigger only when pushing to the main branch
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, stage]  # Recommended: include 'self-hosted' label
+
+    steps:
+      - name: List repo files (debug)
+        run: ls -al
+
+      - name: Run deploy script
+        run: ./deploy.sh
