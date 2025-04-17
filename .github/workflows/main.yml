@@ -10,6 +10,9 @@ jobs:
     runs-on: [self-hosted, stage]  # Recommended: include 'self-hosted' label
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: List repo files (debug)
         run: ls -al
 
